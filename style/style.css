@@ -1,0 +1,28 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.content{
+    height: 100%;
+    background-color: darkslategray;
+    display: flex;
+}
+.content>div{
+    margin: auto;
+}
+.header-title{
+    background-color: bisque;
+    width: fit-content;
+    padding: 40px;
+    margin: auto;
+}
+.content-title{
+    background-color: chocolate;
+    margin: auto;
+    width: fit-content;
+    padding: 50px;
+    font-size: 23px;
+    color: darkred;
+    font-weight: bolder;
+}
