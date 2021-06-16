@@ -2,7 +2,88 @@ html,body{
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    font-family: Rubik;
+    font-style: normal;
 }
+header{
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+.logo{
+    margin-left: 130px;
+    display: flex;
+}
+.logo-text{
+    margin: auto;
+    margin-left: 11px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+.search-line{
+    width: 402px;
+    margin: auto 0;
+    margin-left: 207px;
+    height: 25px;
+}
+.search-line>form{
+    display: flex;
+    height: inherit;
+}
+.search-line>form>input{
+    width: 320px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.search-line>form>input:focus-visible{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    outline: none;
+}
+.search-line>form>input:focus::placeholder{
+    color: transparent;
+}
+.search-line>form>button{
+    margin-left: 37px;
+    color: red;
+    border: none;
+    background-color: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.search-line>form>button:hover{
+    cursor: pointer;
+}
+.red-button-div{
+    margin: auto;
+    margin-left: 276px;
+    margin-right: 130px;
+}
+.red-button{
+    display: inline-block;
+    padding: 9px 32px;
+    outline: none;
+    background: #E5261E;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.red-button:hover{
+    background: #CC221B;
+}
+
 .content{
     height: 100%;
     background-color: darkslategray;
