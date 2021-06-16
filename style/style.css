@@ -66,7 +66,6 @@ header{
 .red-button-div{
     margin: auto;
     margin-left: 276px;
-    margin-right: 130px;
 }
 .red-button{
     display: inline-block;
@@ -82,6 +81,18 @@ header{
 }
 .red-button:hover{
     background: #CC221B;
+}
+.out-button{
+    color: red;
+    border: none;
+    background-color: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+.hiden{
+    display: none;
 }
 
 .content{
