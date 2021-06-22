@@ -6,13 +6,16 @@ html,body{
     font-family: Rubik;
     font-style: normal;
 }
-header{
-    height: 40px;
+.layout-center{
+    width: 1180px;
+    margin: 0 auto;
     display: flex;
+}
+.class-header{
+    height: 40px;
     margin-top: 30px;
 }
 .logo{
-    margin-left: 130px;
     display: flex;
 }
 .logo-text{
@@ -118,3 +121,5 @@ header{
     color: darkred;
     font-weight: bolder;
 }
+
+
