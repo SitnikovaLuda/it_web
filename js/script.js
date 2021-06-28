@@ -28,7 +28,8 @@ function logIn(){
 
         let arr = (log.value).replace(/\s+/g, ' ').trim().split(' ');
         let name = arr[0] + ' ';
-        name += arr.length > 0 ? arr[1][0] + '. ' + arr[2][0] + '.' : '';
+        name += arr.length > 1 ? arr[1][0] + '. ' : '';
+        name += arr.length > 2 ? arr[2][0] + '.' : '';
         document.getElementById('sign-out').insertAdjacentHTML('afterbegin','<div class="guest-name">'+ name +'</div>');
 
         e.classList.add('hiden');
