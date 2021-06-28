@@ -19,13 +19,338 @@
                 <button type="submit">Найти</button>
             </form>
         </div>
-        <div class="red-button-div">
+        <div id="sign-in" class="red-button-div" onclick="sign(this)">
             <a href="#" class="red-button">Войти</a>
         </div>
-        <div class="red-button-div hiden">
+        <div id="sign-out" class="red-button-div hiden" onclick="sign(this)">
             <a href="#" class="out-button">Выйти</a>
         </div>
     </header>
+
+    <div class="switch">
+        <div class="switch-one switch-one-films active-sw" onclick="films_active(this)">
+            Фильмы
+        </div>
+        <div class="switch-one switch-one-channels" onclick="channels_active(this)">
+            Телеканалы
+        </div>
+    </div>
+    <main class="layout-center main-films">
+        <section class="new-content">
+            <div class="name-title">
+                🔥 Новинки
+            </div>
+            <ul class="film-list">
+                <li>
+                    <div class="one-film">
+                        <div class="one-film-img">
+                            <img src="images/one-film-1svg.svg" alt="">
+                        </div>
+                        <div class="one-film-description">
+                        </div>
+                    </div>
+                    <div class="one-film-name">
+                        Мульт в кино. Выпуск №103. Некогда грустить!
+                    </div>
+                </li>
+                <li>
+                    <div class="one-film">
+                        <div class="one-film-img">
+                            <img src="images/one-film-2.svg" alt="">
+                        </div>
+                        <div class="one-film-description">
+                        </div>
+                    </div>
+                    <div class="one-film-name">
+                        Новый Бэтмен
+                    </div>
+                </li>
+                <li>
+                    <div class="one-film">
+                        <div class="one-film-img">
+                            <img src="images/one-film-3.svg" alt="">
+                        </div>
+                        <div class="one-film-description">
+                            Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, 
+                            на закате его «золотого века». Известный актер Рик Далтон и его дублер 
+                            Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                        </div>
+                    </div>
+                    <div class="one-film-name">
+                        Однажды... в Голливуде
+                    </div>
+                </li>
+                <li>
+                    <div class="one-film">
+                        <div class="one-film-img">
+                            <img src="images/one-film-4.svg" alt="">
+                        </div>
+                        <div class="one-film-description">
+                        </div>
+                    </div>
+                    <div class="one-film-name">
+                        Стриптизёрши
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="genres">
+            <div class="name-title">
+                Жанры
+            </div>
+            <ul class="genre-list film-list">
+                <li class="one-genre" style="background:linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);">
+                    <div class="one-genre-pict">
+                        😁
+                    </div>
+                    <div class="one-genre-name">
+                        Комедии
+                    </div>
+                </li>
+                <li class="one-genre" style="background:linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);">
+                    <div class="one-genre-pict">
+                        😭
+                    </div>
+                    <div class="one-genre-name">
+                        Драмы
+                    </div>
+                </li>
+                <li class="one-genre" style="background:linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);">
+                    <div class="one-genre-pict">
+                        👽
+                    </div>
+                    <div class="one-genre-name">
+                        Фантастика
+                    </div>
+                </li>
+                <li class="one-genre" style="background:linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);">
+                    <div class="one-genre-pict">
+                        👻
+                    </div>
+                    <div class="one-genre-name">
+                        Ужасы
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <main class="main-program layout-center hiden">
+        <ul class="program-list">
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="program-one">
+                    <div class="program-one-pict">
+                        <img src="./images/1st.svg" alt="Первый канал">
+                    </div>
+                    <div class="program-one-text">
+                        <div class="program-one-title">Первый канал</div>
+                        <ul class="program-one-program">
+                            <li>
+                                <div class="program-one-program-line now-time">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="program-one-program-line">
+                                    <div class="time">13:00</div>
+                                    <div class="program-name">Новости (с субтитрами)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="foot">
+        <div class="img-foot">
+            <img src="images/footer-logo.svg" alt="footer-logo">
+        </div>
+        <div class="footer-text-block">
+            <div class="adress">
+                426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
+            </div>
+            <div class="phone">
+                +7 (3412) 93-88-61, 43-29-29
+            </div>
+            <div class="site">
+                htc-cs.ru
+            </div>
+        </div>
+    </footer>
+
+    <div class="sign-bckg  hiden" id="sign-form">
+        <div class="sign-form">
+            Вход
+            <form action="" method="post">
+                <input class="log" type="text" name="" id="log" placeholder="Логин">
+                <input class="pass" type="password" name="" id="pass" placeholder="Пароль">
+                <div class="rad">
+                    <input type="checkbox" name="" id="radio"><label for="radio">Запомнить</label>
+                </div>
+                <input type="button" class="log-in-btn red-button" value="Войти" onclick="logIn()">
+            </form>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
