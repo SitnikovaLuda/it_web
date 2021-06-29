@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('sign-out').insertAdjacentHTML('afterbegin','<div class="guest-name">'+ localStorage.key(0) +'</div>');
         document.getElementById('sign-in').classList.add('hiden');
         document.getElementById('sign-out').classList.remove('hiden');
+        document.getElementById('log').value = localStorage.key(0);
+        document.getElementById('pass').value = localStorage.getItem(localStorage.key(0));
     }
 });
 
