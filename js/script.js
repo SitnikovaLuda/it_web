@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     if(localStorage.length > 0){
-        document.getElementById('sign-out').insertAdjacentHTML('afterbegin','<div class="guest-name">'+ localStorage.key(0) +'</div>');
-        document.getElementById('sign-in').classList.add('hiden');
-        document.getElementById('sign-out').classList.remove('hiden');
+        // document.getElementById('sign-out').insertAdjacentHTML('afterbegin','<div class="guest-name">'+ localStorage.key(0) +'</div>');
+        // document.getElementById('sign-in').classList.add('hiden');
+        // document.getElementById('sign-out').classList.remove('hiden');
         document.getElementById('log').value = localStorage.key(0);
         document.getElementById('pass').value = localStorage.getItem(localStorage.key(0));
+        radio.checked = 1;
+        localStorage.clear();
     }
 });
 
@@ -13,6 +15,7 @@ function search(e){
     search_nodes.forEach(element => {
         element.innerHTML = element.innerHTML.replace(/<mark>/g, '');
         element.innerHTML = element.innerHTML.replace(/<\/mark>/g, '');
+        if(element.parentElement.style.visibility) element.parentElement.style.visibility = '';
     });
     if((e.value.replace(/\s/g, '')).length > 0){
         search_nodes.forEach(element => {
@@ -20,6 +23,7 @@ function search(e){
             if(element.innerHTML.search(new RegExp(needed, 'i')) != -1){
                 element.innerHTML = element.innerHTML.replace(new RegExp(needed, 'ig'), '<mark>' + '$&' + '</mark>');
             }
+            else element.parentElement.style.visibility = 'hidden';
         });
     }
     if(document.getElementsByTagName('mark').length > 0){
@@ -43,23 +47,27 @@ function sign(e){
     else if(e.id == 'sign-out'){
         e.classList.add('hiden');
         document.getElementById('sign-in').classList.remove('hiden');
-        localStorage.removeItem(document.querySelector('.guest-name').innerHTML);
         document.querySelector('.guest-name').remove();
     }
 }
 
 function sign_form_popup(){
-    document.body.style.position = 'fixed';
+    // document.body.style.position = 'fixed';
     document.getElementById('sign-form').classList.remove('hiden');
+    if (localStorage.length > 0) {
+        log.value = localStorage.key(0);
+        pass.value = localStorage.getItem(localStorage.key(0));
+        radio.checked = 1;
+    }
 }
 
-function logIn(){
+function logIn() {
     let log = document.getElementById('log');
     let pass = document.getElementById('pass');
-    if(log.value == ""){
+    if (log.value == "") {
         alert("Введите логин");
     }
-    else if(pass.value == ""){
+    else if (pass.value == "") {
         alert("Введите пароль");
     }
     else {
@@ -69,16 +77,21 @@ function logIn(){
         let name = arr[0] + ' ';
         name += arr.length > 1 ? arr[1][0] + '. ' : '';
         name += arr.length > 2 ? arr[2][0] + '.' : '';
-        document.getElementById('sign-out').insertAdjacentHTML('afterbegin','<div class="guest-name">'+ name +'</div>');
+        document.getElementById('sign-out').insertAdjacentHTML('afterbegin', '<div class="guest-name" title = "'+ name + '">' + name + '</div>');
 
         e.classList.add('hiden');
         document.getElementById('sign-out').classList.remove('hiden');
         document.getElementById('sign-form').classList.add('hiden');
         document.body.style.position = 'initial';
 
-        if(radio.checked){
+        if (radio.checked) {
+            localStorage.clear();
             localStorage.setItem(name, pass.value);
         }
+        else localStorage.clear();
+        log.value = '';
+        pass.value = '';
+        radio.checked = 0;
     }
 }
 
