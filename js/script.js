@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('log').value = localStorage.key(0);
         document.getElementById('pass').value = localStorage.getItem(localStorage.key(0));
         radio.checked = 1;
-        localStorage.clear();
     }
 });
 
@@ -26,11 +25,11 @@ function search(e){
             else element.parentElement.style.visibility = 'hidden';
         });
     }
-    if(document.getElementsByTagName('mark').length > 0){
-        document.querySelector('.big-head').style.position='fixed';
-        document.querySelector('.switch').style.marginTop = '100px';
-        document.getElementsByTagName('mark')[0].scrollIntoView({block: "center"});
-    }
+    // if(document.getElementsByTagName('mark').length > 0){
+    //     document.querySelector('.big-head').style.position='fixed';
+    //     document.querySelector('.switch').style.marginTop = '100px';
+    //     document.getElementsByTagName('mark')[0].scrollIntoView({block: "center"});
+    // }
 }
 
 document.getElementById('search_line').addEventListener('blur',(e)=>{
@@ -44,8 +43,8 @@ function sign(e){
     if(e.id == 'sign-in'){
         sign_form_popup();
     }
-    else if(e.id == 'sign-out'){
-        e.classList.add('hiden');
+    else if(e.classList.contains("out-button")){
+        e.parentElement.classList.add('hiden');
         document.getElementById('sign-in').classList.remove('hiden');
         document.querySelector('.guest-name').remove();
     }
@@ -85,7 +84,8 @@ function logIn() {
         document.body.style.position = 'initial';
 
         if (radio.checked) {
-            localStorage.clear();
+            if(localStorage.length > 0)
+                localStorage.clear();
             localStorage.setItem(name, pass.value);
         }
         else localStorage.clear();
